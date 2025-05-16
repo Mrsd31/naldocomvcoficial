@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naldo.comvocê</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <!-- Substitua pelo seu logo -->
+            <img src="naldologo-Photoroom.png" alt="Logo da Loja" class="logo">
+        </div>
+        
+        <nav>
+            <div class="menu">
+                <a href="#" class="active">Início</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Contato</a>
+            </div>
+            
+            <div class="cart-whatsapp">
+                <button class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Pedir via WhatsApp
+                </button>
+                
+                <button class="cart-btn" id="open-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Navegação por categorias -->
+    <div class="categorias">
+        <button class="categoria-btn active" data-categoria="todos">Todos</button>
+        <button class="categoria-btn" data-categoria="canecas">Canecas</button>
+        <button class="categoria-btn" data-categoria="camisas">Camisas</button>
+        <button class="categoria-btn" data-categoria="dia-namorados">Dia dos Namorados</button>
+        <button class="categoria-btn" data-categoria="bazar">Bazar</button>
+        <button class="categoria-btn" data-categoria="papelaria">Papelaria</button>
+        <button class="categoria-btn" data-categoria="eletronicos">Eletrônicos</button>
+    </div>
+    
+    <main>
+        <!-- Seção de Canecas -->
+        <section class="categoria-produtos" data-categoria="canecas">
+            <h2 class="categoria-titulo">Canecas Personalizadas</h2>
+            <div class="produtos-grid">
+                <!-- Caneca 1 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Canecas</span>
+                    <img src="img/canecas/canecas .jpg" alt="Caneca Café Premium" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Personalizada</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                        <button class="add-to-cart" data-id="101" data-name="Caneca Café Premium" data-price="39.90" data-img="https://via.placeholder.com/300x300?text=Caneca+1">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Caneca 2 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Canecas</span>
+                    <img src="img/canecas/canecas  2.jpg" alt="Caneca Funny Cats" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca caveirinha romântica</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                        <button class="add-to-cart" data-id="102" data-name="Caneca Funny Cats" data-price="34.90" data-img="https://via.placeholder.com/300x300?text=Caneca+2">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Caneca 3 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Canecas</span>
+                    <img src="img/canecas/canecas 5.jpg" alt="Caneca Programador" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">caveirinha romântica</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                        <button class="add-to-cart" data-id="103" data-name="Caneca Programador" data-price="42.90" data-img="https://via.placeholder.com/300x300?text=Caneca+3">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Caneca 4 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Canecas</span>
+                    <img src="img/canecas/canecas 7.jpg" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">caveirinha romântica</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                        <button class="add-to-cart" data-id="104" data-name="Caneca Amor de Mãe" data-price="37.90" data-img="https://via.placeholder.com/300x300?text=Caneca+4">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção de Camisas -->
+        <section class="categoria-produtos" data-categoria="camisas">
+            <h2 class="categoria-titulo">Camisas Estilosas</h2>
+            <div class="produtos-grid">
+                <!-- Camisa 1 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Camisas</span>
+                    <img src="https://via.placeholder.com/300x300?text=Camisa+1" alt="Camisa Básica Branca" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Camisa Básica Branca</h3>
+                        <p class="produto-preco">R$ 59,90</p>
+                        <button class="add-to-cart" data-id="201" data-name="Camisa Básica Branca" data-price="59.90" data-img="https://via.placeholder.com/300x300?text=Camisa+1">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Camisa 2 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Camisas</span>
+                    <img src="https://via.placeholder.com/300x300?text=Camisa+2" alt="Camisa Listrada Vermelha" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Camisa Listrada Vermelha</h3>
+                        <p class="produto-preco">R$ 69,90</p>
+                        <button class="add-to-cart" data-id="202" data-name="Camisa Listrada Vermelha" data-price="69.90" data-img="https://via.placeholder.com/300x300?text=Camisa+2">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Camisa 3 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Camisas</span>
+                    <img src="https://via.placeholder.com/300x300?text=Camisa+3" alt="Camisa Rock Vintage" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Camisa Rock Vintage</h3>
+                        <p class="produto-preco">R$ 79,90</p>
+                        <button class="add-to-cart" data-id="203" data-name="Camisa Rock Vintage" data-price="79.90" data-img="https://via.placeholder.com/300x300?text=Camisa+3">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Camisa 4 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Camisas</span>
+                    <img src="https://via.placeholder.com/300x300?text=Camisa+4" alt="Camisa Esportiva Preta" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Camisa Esportiva Preta</h3>
+                        <p class="produto-preco">R$ 89,90</p>
+                        <button class="add-to-cart" data-id="204" data-name="Camisa Esportiva Preta" data-price="89.90" data-img="https://via.placeholder.com/300x300?text=Camisa+4">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Dia dos Namorados -->
+        <section class="categoria-produtos" data-categoria="dia-namorados">
+            <h2 class="categoria-titulo">Especial Dia dos Namorados</h2>
+            <div class="produtos-grid">
+                <!-- Produto 1 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Dia dos Namorados</span>
+                    <img src="img/canecas/canecas  3.jpg" alt="Caneca" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Casal Personalizada</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                        <button class="add-to-cart" data-id="301" data-name="Caixa Presente Coração" data-price="49.90" data-img="https://via.placeholder.com/300x300?text=Namorados+1">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 2 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Dia dos Namorados</span>
+                    <img src="img/canecas/namorados.jpg" alt="Caneca Casal Personalizada" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Quadro do dias dos namorados</h3>
+                        <p class="produto-preco">R$ 00,00</p>
+                        <button class="add-to-cart" data-id="302" data-name="Quadro do dias dos namorados" data-price="89.90" data-img="https://via.placeholder.com/300x300?text=Namorados+2">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 3 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Dia dos Namorados</span>
+                    <img src="img/canecas/namorados 1.jpg" alt="Kit Romance" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Quadro do dias dos namorados</h3>
+                        <p class="produto-preco">R$ 35,90</p>
+                        <button class="add-to-cart" data-id="303" data-name="Quadro do dias dos namorados" data-price="129.90" data-img="https://via.placeholder.com/300x300?text=Namorados+3">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 4 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Dia dos Namorados</span>
+                    <img src="img/canecas/canecas 4.jpg" alt="caveirinha" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca caveirinha romântica</h3>
+                        <p class="produto-preco">R$ 29,99</p>
+                        <button class="add-to-cart" data-id="304" data-name="Pelúcia Coração" data-price="79.90" data-img="https://via.placeholder.com/300x300?text=Namorados+4">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Bazar -->
+        <section class="categoria-produtos" data-categoria="bazar">
+            <h2 class="categoria-titulo">Bazar</h2>
+            <div class="produtos-grid">
+                <!-- Produto 1 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Bazar</span>
+                    <img src="https://via.placeholder.com/300x300?text=Bazar+1" alt="Jogo de Copos" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Jogo de Copos 6 peças</h3>
+                        <p class="produto-preco">R$ 59,90</p>
+                        <button class="add-to-cart" data-id="401" data-name="Jogo de Copos 6 peças" data-price="59.90" data-img="https://via.placeholder.com/300x300?text=Bazar+1">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 2 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Bazar</span>
+                    <img src="https://via.placeholder.com/300x300?text=Bazar+2" alt="Toalha de Mesa" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Toalha de Mesa Retrô</h3>
+                        <p class="produto-preco">R$ 89,90</p>
+                        <button class="add-to-cart" data-id="402" data-name="Toalha de Mesa Retrô" data-price="89.90" data-img="https://via.placeholder.com/300x300?text=Bazar+2">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 3 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Bazar</span>
+                    <img src="https://via.placeholder.com/300x300?text=Bazar+3" alt="Jogo de Talheres" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Jogo de Talheres Inox</h3>
+                        <p class="produto-preco">R$ 129,90</p>
+                        <button class="add-to-cart" data-id="403" data-name="Jogo de Talheres Inox" data-price="129.90" data-img="https://via.placeholder.com/300x300?text=Bazar+3">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 4 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Bazar</span>
+                    <img src="https://via.placeholder.com/300x300?text=Bazar+4" alt="Panela de Pressão" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Panela de Pressão 5L</h3>
+                        <p class="produto-preco">R$ 179,90</p>
+                        <button class="add-to-cart" data-id="404" data-name="Panela de Pressão 5L" data-price="179.90" data-img="https://via.placeholder.com/300x300?text=Bazar+4">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Papelaria -->
+        <section class="categoria-produtos" data-categoria="papelaria">
+            <h2 class="categoria-titulo">Papelaria</h2>
+            <div class="produtos-grid">
+                <!-- Produto 1 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Papelaria</span>
+                    <img src="https://via.placeholder.com/300x300?text=Papelaria+1" alt="Caderno Espiral" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caderno Espiral 200 folhas</h3>
+                        <p class="produto-preco">R$ 19,90</p>
+                        <button class="add-to-cart" data-id="501" data-name="Caderno Espiral 200 folhas" data-price="19.90" data-img="https://via.placeholder.com/300x300?text=Papelaria+1">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 2 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Papelaria</span>
+                    <img src="https://via.placeholder.com/300x300?text=Papelaria+2" alt="Kit Canetas Coloridas" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Kit Canetas Coloridas 12 cores</h3>
+                        <p class="produto-preco">R$ 29,90</p>
+                        <button class="add-to-cart" data-id="502" data-name="Kit Canetas Coloridas 12 cores" data-price="29.90" data-img="https://via.placeholder.com/300x300?text=Papelaria+2">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 3 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Papelaria</span>
+                    <img src="https://via.placeholder.com/300x300?text=Papelaria+3" alt="Mochila Escolar" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Mochila Escolar Resistente</h3>
+                        <p class="produto-preco">R$ 129,90</p>
+                        <button class="add-to-cart" data-id="503" data-name="Mochila Escolar Resistente" data-price="129.90" data-img="https://via.placeholder.com/300x300?text=Papelaria+3">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 4 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Papelaria</span>
+                    <img src="https://via.placeholder.com/300x300?text=Papelaria+4" alt="Estojo Completo" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Estojo Completo com Materiais</h3>
+                        <p class="produto-preco">R$ 49,90</p>
+                        <button class="add-to-cart" data-id="504" data-name="Estojo Completo com Materiais" data-price="49.90" data-img="https://via.placeholder.com/300x300?text=Papelaria+4">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Eletrônicos -->
+        <section class="categoria-produtos" data-categoria="eletronicos">
+            <h2 class="categoria-titulo">Eletrônicos</h2>
+            <div class="produtos-grid">
+                <!-- Produto 1 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Eletrônicos</span>
+                    <img src="https://via.placeholder.com/300x300?text=Eletronicos+1" alt="Fone Bluetooth" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Fone Bluetooth Sem Fio</h3>
+                        <p class="produto-preco">R$ 159,90</p>
+                        <button class="add-to-cart" data-id="601" data-name="Fone Bluetooth Sem Fio" data-price="159.90" data-img="https://via.placeholder.com/300x300?text=Eletronicos+1">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 2 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Eletrônicos</span>
+                    <img src="https://via.placeholder.com/300x300?text=Eletronicos+2" alt="Carregador Portátil" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Carregador Portátil 10000mAh</h3>
+                        <p class="produto-preco">R$ 129,90</p>
+                        <button class="add-to-cart" data-id="602" data-name="Carregador Portátil 10000mAh" data-price="129.90" data-img="https://via.placeholder.com/300x300?text=Eletronicos+2">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 3 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Eletrônicos</span>
+                    <img src="https://via.placeholder.com/300x300?text=Eletronicos+3" alt="Smartwatch" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Smartwatch Inteligente</h3>
+                        <p class="produto-preco">R$ 299,90</p>
+                        <button class="add-to-cart" data-id="603" data-name="Smartwatch Inteligente" data-price="299.90" data-img="https://via.placeholder.com/300x300?text=Eletronicos+3">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Produto 4 -->
+                <div class="produto-card">
+                    <span class="produto-categoria">Eletrônicos</span>
+                    <img src="https://via.placeholder.com/300x300?text=Eletronicos+4" alt="Mouse Gamer" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Mouse Gamer RGB</h3>
+                        <p class="produto-preco">R$ 149,90</p>
+                        <button class="add-to-cart" data-id="604" data-name="Mouse Gamer RGB" data-price="149.90" data-img="https://via.placeholder.com/300x300?text=Eletronicos+4">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Carrinho de Compras -->
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cart-items">
+            <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+            <p class="empty-cart-message">Seu carrinho está vazio</p>
+        </div>
+        
+        <div class="cart-total">
+            Total: <span id="cart-total">R$ 0,00</span>
+        </div>
+        
+        <button class="checkout-btn" id="checkout-btn">
+            <i class="fab fa-whatsapp"></i> Finalizar via WhatsApp
+        </button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2008 Naldo.comvocê. Todos os direitos reservados.</p>
+        
+        <div class="footer-links">
+            <a href="#">Sobre Nós</a>
+            <a href="#">Contato</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Serviço</a>
+        </div>
+        
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
