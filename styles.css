@@ -673,3 +673,101 @@ body {
     aspect-ratio: 16 / 9;
   }
 }
+
+.oferta-relampago {
+    animation: piscar 1s infinite;
+    background-color: #FF4081;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+@keyframes piscar {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Container da imagem com posição relativa */
+.container-imagem {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo do selo de oferta */
+.selo-oferta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px !important;
+    height: auto;
+    animation: pulsar 1.5s infinite;
+}
+
+/* Animação personalizada */
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Texto de oferta */
+.oferta-relampago-texto {
+    background-color: #FF4081;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+}
+
+/* Preço antigo riscado */
+.preco-antigo {
+    text-decoration: line-through;
+    color: #757575;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+/* Destaque no carrinho */
+.cart-item[data-oferta="true"] {
+    border-left: 4px solid #FF4081;
+}
+
+.dados-cliente {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.dados-cliente h3 {
+    margin-bottom: 15px;
+    color: #E53935;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 60px;
+    resize: vertical;
+}
+
+#cliente-telefone {
+    font-family: monospace;
+}

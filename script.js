@@ -190,7 +190,7 @@ checkoutBtn.addEventListener('click', () => {
     message += `\n\nMeus dados:\nNome: \nEndereço: \nTelefone: `;
     
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/552198834627?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/5521988304627?text=${encodedMessage}`;
     
     window.open(whatsappUrl, '_blank');
 });
@@ -289,3 +289,78 @@ setInterval(() => {
   moveToSlide(currentIndex);
 }, 5000);
 
+// Modifique a função do WhatsApp
+checkoutBtn.addEventListener('click', () => {
+    if (cart.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    // Validação dos dados
+    const nome = document.getElementById('cliente-nome').value;
+    const endereco = document.getElementById('cliente-endereco').value;
+    const telefone = document.getElementById('cliente-telefone').value;
+    
+    if (!nome || !endereco || !telefone) {
+        alert("Por favor, preencha todos os dados obrigatórios!");
+        return;
+    }
+
+    // Formatar mensagem
+    let message = `*Pedido E-commerce* 🛒\n\n`;
+    message += `*Cliente:* ${nome}\n`;
+    message += `*Endereço:* ${endereco}\n`;
+    message += `*WhatsApp:* ${telefone}\n\n`;
+    
+    if (document.getElementById('cliente-observacoes').value) {
+        message += `*Observações:* ${document.getElementById('cliente-observacoes').value}\n\n`;
+    }
+
+    message += `*Itens do Pedido:*\n`;
+    cart.forEach(item => {
+        message += `➡ ${item.name} (${item.quantity}x) - R$ ${(item.price * item.quantity).toFixed(2)}\n`;
+    });
+
+    message += `\n*Total:* R$ ${cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2)}`;
+    message += `\n\n*Forma de Pagamento:*\n⬜ Dinheiro\n⬜ Cartão\n⬜ PIX`;
+
+    // Codificar para URL
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/5521987654321?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+});
+
+// Salvar ao digitar
+document.querySelectorAll('.dados-cliente input, .dados-cliente textarea').forEach(input => {
+    input.addEventListener('input', () => {
+        localStorage.setItem('ultimoPedido', JSON.stringify({
+            nome: document.getElementById('cliente-nome').value,
+            endereco: document.getElementById('cliente-endereco').value,
+            telefone: document.getElementById('cliente-telefone').value,
+            observacoes: document.getElementById('cliente-observacoes').value
+        }));
+    });
+});
+
+// Carregar ao abrir o carrinho
+if (localStorage.getItem('ultimoPedido')) {
+    const dados = JSON.parse(localStorage.getItem('ultimoPedido'));
+    document.getElementById('cliente-nome').value = dados.nome || '';
+    document.getElementById('cliente-endereco').value = dados.endereco || '';
+    document.getElementById('cliente-telefone').value = dados.telefone || '';
+    document.getElementById('cliente-observacoes').value = dados.observacoes || '';
+}
+
+// Adicione este código no JavaScript
+document.getElementById('cliente-telefone').addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    
+    if (value.length > 11) value = value.substring(0, 11);
+    
+    // Formatação: (00) 00000-0000
+    value = value.replace(/^(\d{2})(\d)/g, "($1) $2");
+    value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+    
+    e.target.value = value;
+});
