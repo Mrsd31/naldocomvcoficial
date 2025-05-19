@@ -771,3 +771,201 @@ body {
 #cliente-telefone {
     font-family: monospace;
 }
+
+/* Banner de Ofertas */
+.banner-ofertas {
+    background: linear-gradient(135deg, #FF5252, #E53935);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 5%;
+    display: none; /* Inicialmente escondido */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.oferta-relampago-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.selo-banner {
+    width: 80px;
+    height: auto;
+    animation: pulsar 1.5s infinite;
+}
+
+.contador {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ver-ofertas-btn {
+    background-color: white;
+    color: #E53935;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ver-ofertas-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Mostrar apenas na categoria Todos */
+.categoria-todos #banner-ofertas,
+[data-categoria="todos"] #banner-ofertas {
+    display: block;
+}
+
+/* Carrossel */
+#carrossel-container {
+    display: none; /* Inicialmente escondido */
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.nav-dot.active {
+    background: var(--amarelo-primario);
+}
+
+/* Mostrar apenas na categoria Todos */
+body.categoria-todos #carrossel-container,
+[data-categoria="todos"] ~ #carrossel-container {
+    display: block;
+}
+
+/* Estilo base (sempre aplicado) */
+.oferta-especial {
+    position: relative;
+    border: 2px solid #FF5252;
+}
+
+.oferta-especial .selo-oferta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    animation: pulsar 1.5s infinite;
+}
+
+/* Esconder em outras categorias */
+.produtos-grid:not([data-categoria="todos"]) .oferta-especial {
+    display: none;
+}
+
+/* Mostrar apenas na categoria Todos */
+[data-categoria="todos"] .oferta-especial {
+    display: block;
+}
+
+@keyframes pulsar {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Container principal do anúncio */
+.anuncio-destaque {
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme seu layout */
+    margin: 0 auto 30px;
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* Container da imagem */
+.container-imagem-anuncio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 25%; /* Proporção 4:1 (ajuste conforme necessidade) */
+    overflow: hidden;
+}
+
+/* Imagem do anúncio */
+.imagem-anuncio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço */
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* Efeito hover opcional */
+.imagem-anuncio:hover {
+    transform: scale(1.03);
+}
+
+/* Selo de oferta */
+.container-imagem-anuncio .selo-oferta {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    z-index: 2;
+    animation: pulsar 1.5s infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-imagem-anuncio {
+        padding-bottom: 40%; /* Proporção maior em mobile */
+    }
+    
+    .container-imagem-anuncio .selo-oferta {
+        width: 60px;
+        top: 10px;
+        right: 10px;
+    }
+}

@@ -364,3 +364,75 @@ document.getElementById('cliente-telefone').addEventListener('input', function(e
     
     e.target.value = value;
 });
+
+// Contador regressivo
+function atualizarContador() {
+    const agora = new Date();
+    const finalDia = new Date();
+    finalDia.setHours(23, 59, 59, 0);
+    
+    const diff = finalDia - agora;
+    const horas = Math.floor(diff / (1000 * 60 * 60));
+    const minutos = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const segundos = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    document.getElementById('contador-tempo').textContent = 
+        `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+}
+
+setInterval(atualizarContador, 1000);
+atualizarContador();
+
+// Rolagem até as ofertas
+document.getElementById('scroll-to-ofertas').addEventListener('click', () => {
+    document.querySelector('.produtos-grid').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+// Mostrar/ocultar banner conforme categoria
+function verificarCategoria() {
+    const categoriaAtiva = document.querySelector('.categoria-btn.active').dataset.categoria;
+    const banner = document.getElementById('banner-ofertas');
+    
+    if (categoriaAtiva === 'todos') {
+        banner.style.display = 'block';
+    } else {
+        banner.style.display = 'none';
+    }
+}
+
+// Observar mudanças nas categorias
+document.querySelectorAll('.categoria-btn').forEach(btn => {
+    btn.addEventListener('click', verificarCategoria);
+});
+
+// Esta função será chamada quando mudar de categoria
+function atualizarOfertas() {
+    const categoriaAtiva = document.querySelector('.categoria-btn.active').dataset.categoria;
+    const todasOfertas = document.querySelectorAll('.oferta-especial');
+    
+    todasOfertas.forEach(oferta => {
+        if (categoriaAtiva === 'todos') {
+            oferta.style.display = 'block';
+        } else {
+            oferta.style.display = 'none';
+        }
+    });
+}
+
+// Chame a função quando:
+// 1. A página carregar
+document.addEventListener('DOMContentLoaded', atualizarOfertas);
+
+// 2. Quando mudar de categoria
+document.querySelectorAll('.categoria-btn').forEach(btn => {
+    btn.addEventListener('click', atualizarOfertas);
+});
+
+// Efeito de zoom suave ao clicar
+document.querySelectorAll('.imagem-anuncio').forEach(img => {
+    img.addEventListener('click', () => {
+        img.style.transform = img.style.transform === 'scale(1.05)' ? 'scale(1)' : 'scale(1.05)';
+    });
+});
