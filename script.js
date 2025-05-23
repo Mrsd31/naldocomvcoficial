@@ -319,3 +319,37 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mostrar categoria "Todos" por padrão
     filterProducts('todos');
 });
+
+function filterProducts(categoria) {
+    const ofertaEspecial = document.getElementById('oferta-especial');
+    
+    if (categoria === 'todos') {
+        // Mostrar todos os produtos e a oferta especial
+        categoriasProdutos.forEach(section => {
+            section.style.display = 'block';
+        });
+        ofertaEspecial.style.display = 'block';
+    } else {
+        // Esconder a oferta especial e mostrar apenas a categoria selecionada
+        ofertaEspecial.style.display = 'none';
+        categoriasProdutos.forEach(section => {
+            if (section.getAttribute('data-categoria') === categoria) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+    
+   
+    filterProducts('todos');
+    
+    
+    const ofertaEspecial = document.getElementById('oferta-especial');
+    ofertaEspecial.style.display = 'block';
+});

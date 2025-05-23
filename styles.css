@@ -1118,3 +1118,27 @@ body.categoria-todos #carrossel-container,
     min-width: 20px;
     text-align: center;
 }
+
+/* Estilo para a oferta especial */
+.oferta-especial {
+    margin-bottom: 30px;
+    position: relative;
+    display: none; /* Inicialmente escondido */
+}
+
+.oferta-especial .container-imagem-anuncio {
+    position: relative;
+}
+
+.imagem-anuncio {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.selo-oferta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: auto;
+}
