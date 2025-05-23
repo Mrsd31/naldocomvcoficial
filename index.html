@@ -35,713 +35,295 @@
     <div class="categorias-container">
         <div class="categorias">
             <button class="categoria-btn active" data-categoria="todos">Todos</button>
-            <button class="categoria-btn" data-categoria="grafica-rapida">Gráfica Rápida</button>
-            <button class="categoria-btn" data-categoria="personalizados">Personalizados</button>
-            <button class="categoria-btn" data-categoria="dia-namorados">Dia dos Namorados</button>
-            <button class="categoria-btn" data-categoria="bazar">Bazar</button>
+            <button class="categoria-btn" data-categoria="casal">Casal</button>
+            <button class="categoria-btn" data-categoria="maes">Mães</button>
+            <button class="categoria-btn" data-categoria="pai">Pai</button>
+            <button class="categoria-btn" data-categoria="matrizes-africana">Matrizes Africana</button>
+            <button class="categoria-btn" data-categoria="gospel">Gospel</button>
+            <button class="categoria-btn" data-categoria="catolica">Católica</button>
+            <button class="categoria-btn" data-categoria="signos">Signos</button>
+            <button class="categoria-btn" data-categoria="amigos">Amigos(a)</button>
+            <button class="categoria-btn" data-categoria="anime">Anime</button>
+            <button class="categoria-btn" data-categoria="professor">Professor</button>
+            <button class="categoria-btn" data-categoria="profissoes">Profissões</button>
         </div>
-        
-        <!-- Subcategorias (aparecerão dinamicamente) -->
-        <div class="subcategorias" id="subcategorias-container"></div>
     </div>
-    
-</div>
 
-<div class="produto-card oferta-especial anuncio-destaque" data-categoria-exclusiva="todos">
-    <span class="produto-categoria">Oferta</span>
-    <div class="container-imagem-anuncio">
-        <img src="img/anucios/capa01.png" class="imagem-anuncio">
-        <img src="img/anucios/capa01.png" class="selo-oferta" alt="Oferta Relâmpago">
+    <div class="produto-card oferta-especial anuncio-destaque" data-categoria-exclusiva="todos">
+        <span class="produto-categoria">Oferta</span>
+        <div class="container-imagem-anuncio">
+            <img src="img/anucios/capa01.png" class="imagem-anuncio">
+            <img src="img/anucios/capa01.png" class="selo-oferta" alt="Oferta Relâmpago">
+        </div>
     </div>
-</div>
 
     <main>
+        <!-- Banner de Ofertas -->
+        <div class="banner-ofertas" id="banner-ofertas">
+            <div class="oferta-relampago-banner">
+                <img src="img/canecas/canecas 6.jpg" alt="Oferta Relâmpago" class="selo-banner">
+                <div class="contador">⏰ Ofertas acabam em: <span id="contador-tempo">24:59:59</span></div>
+                <button class="ver-ofertas-btn" id="scroll-to-ofertas">VER OFERTAS</button>
+            </div>
+        </div>
 
-         <!-- Banner de Ofertas Relâmpago (só aparece na categoria Todos) -->
-<div class="banner-ofertas" id="banner-ofertas">
-    <div class="oferta-relampago-banner">
-        <img src="img/canecas/canecas 6.jpg" alt="Oferta Relâmpago" class="selo-banner">
-        <div class="contador">⏰ Ofertas acabam em: <span id="contador-tempo">24:59:59</span></div>
-        <button class="ver-ofertas-btn" id="scroll-to-ofertas">VER OFERTAS</button>
-    </div>
-</div>
+        <!-- Seção Casal -->
+        <section class="categoria-produtos" data-categoria="casal">
+            <h2 class="categoria-titulo">Casal</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Casal</span>
+                    <img src="img/canecas/canecas 5.jpg" alt="Caneca Casal" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Casal</h3>
+                        <p class="produto-preco">R$ 99,90 (par)</p>
+                        <button class="add-to-cart" data-id="c101" data-name="Caneca Casal" data-price="99.90" data-img="img/canecas/canecas 5.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="produto-card">
+                    <span class="produto-categoria">Casal</span>
+                    <img src="img/diadosnamorados/namorados 2.jpg" alt="Quadro Casal" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Quadro Casal</h3>
+                        <p class="produto-preco">R$ 79,90</p>
+                        <button class="add-to-cart" data-id="c102" data-name="Quadro Casal" data-price="79.90" data-img="img/diadosnamorados/namorados 2.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Seção Gráfica Rápida -->
-<section class="categoria-produtos" data-categoria="grafica-rapida">
-    <h2 class="categoria-titulo">Gráfica Rápida</h2>
-    
-    <!-- Subseção Cartão de Visita -->
-    <div class="subcategoria-produtos" data-subcategoria="cartao-visita">
-        <h3 class="subcategoria-titulo">Cartão de Visita</h3>
-        <div class="produtos-grid">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Cartão de Visita</span>
-                <img src="img/graficarapida/cartaovt1.jpeg" alt="Cartão Visita Premium" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Cartão Visita </h3>
-                    <p class="produto-preco">R$ 49,90 (100un)</p>
-                    <button class="add-to-cart" data-id="g101" data-name="Cartão Visita Premium" data-price="49.90" data-img="img/graficarapida/cartaovt1.jpeg">
-                        Adicionar ao Carrinho
-                    </button>
+        <!-- Seção Mães -->
+        <section class="categoria-produtos" data-categoria="maes">
+            <h2 class="categoria-titulo">Mães</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Mães</span>
+                    <img src="img/graficarapida/camisa01.jpg" alt="Camisa para Mães" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Camisa para Mães</h3>
+                        <p class="produto-preco">R$ 59,90</p>
+                        <button class="add-to-cart" data-id="m101" data-name="Camisa para Mães" data-price="59.90" data-img="img/graficarapida/camisa01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="produto-card">
+                    <span class="produto-categoria">Mães</span>
+                    <img src="img/graficarapida/bady01.jpg" alt="Body Maternidade" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Body Maternidade</h3>
+                        <p class="produto-preco">R$ 49,90</p>
+                        <button class="add-to-cart" data-id="m102" data-name="Body Maternidade" data-price="49.90" data-img="img/graficarapida/bady01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Cartão de Visita</span>
-                <img src="img/graficarapida/cartaovt2.jpeg" alt="Cartão Visita 2" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Cartão Visita 2</h3>
-                    <p class="produto-preco">R$ 79,90 (100un)</p>
-                    <button class="add-to-cart" data-id="g102" data-name="Cartão Visita 2" data-price="79.90" data-img="img/graficarapida/cartaovt2.jpeg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-      <!-- Seção Gráfica Rápida - Subcategoria Panfleto -->
-<div class="subcategoria-produtos" data-subcategoria="panfleto">
-    <h3 class="subcategoria-titulo">Panfletos</h3>
-    <div class="produtos-grid">
-        <!-- Panfleto 1 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Panfleto</span>
-            <img src="img/graficarapida/panfleto01.jpg" alt="Panfleto A5 Colorido" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Panfleto A5 Colorido</h3>
-                <p class="produto-preco">R$ 29,90 (100un)</p>
-                <button class="add-to-cart" 
-                        data-id="g701" 
-                        data-name="Panfleto A5 Colorido" 
-                        data-price="29.90" 
-                        data-img="img/graficarapida/panfleto01.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <!-- Panfleto 2 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Panfleto</span>
-            <img src="img/graficarapida/panfleto02.jpg" alt="Panfleto A4 Dupla Face" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Panfleto A4 Dupla Face</h3>
-                <p class="produto-preco">R$ 49,90 (100un)</p>
-                <button class="add-to-cart" 
-                        data-id="g702" 
-                        data-name="Panfleto A4 Dupla Face" 
-                        data-price="49.90" 
-                        data-img="img/graficarapida/panfleto02.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <!-- Panfleto 3 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Panfleto</span>
-            <img src="img/graficarapida/panfleto03.jpg" alt="Panfleto Promocional" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Panfleto Promocional A5</h3>
-                <p class="produto-preco">R$ 39,90 (100un)</p>
-                <button class="add-to-cart" 
-                        data-id="g703" 
-                        data-name="Panfleto Promocional A5" 
-                        data-price="39.90" 
-                        data-img="img/graficarapida/panfleto03.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
+        </section>
 
-    <!-- Subseção Banner -->
-    <div class="subcategoria-produtos" data-subcategoria="banner">
-        <h3 class="subcategoria-titulo">Banner</h3>
-        <div class="produtos-grid">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Banner</span>
-                <img src="img/graficarapida/banner01.jpg" alt="Banner 90x60cm" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Banner 90x60cm</h3>
-                    <p class="produto-preco">R$ 89,90</p>
-                    <button class="add-to-cart" data-id="g201" data-name="Banner 90x60cm" data-price="89.90" data-img="img/graficarapida/banner01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        <!-- Seção Pai -->
+        <section class="categoria-produtos" data-categoria="pai">
+            <h2 class="categoria-titulo">Pai</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Pai</span>
+                    <img src="img/canecas/canecas 1.jpg" alt="Caneca Pai" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Pai</h3>
+                        <p class="produto-preco">R$ 39,90</p>
+                        <button class="add-to-cart" data-id="p101" data-name="Caneca Pai" data-price="39.90" data-img="img/canecas/canecas 1.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="produto-card">
+                    <span class="produto-categoria">Pai</span>
+                    <img src="img/graficarapida/camisa01.jpg" alt="Camisa Pai" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Camisa Pai</h3>
+                        <p class="produto-preco">R$ 69,90</p>
+                        <button class="add-to-cart" data-id="p102" data-name="Camisa Pai" data-price="69.90" data-img="img/graficarapida/camisa01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Banner</span>
-                <img src="img/graficarapida/banner02.jpg" alt="Banner 1x1m" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Banner 1x1m</h3>
-                    <p class="produto-preco">R$ 129,90</p>
-                    <button class="add-to-cart" data-id="g202" data-name="Banner 1x1m" data-price="129.90" data-img="img/graficarapida/banner02.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Vinil -->
-    <div class="subcategoria-produtos" data-subcategoria="vinil">
-        <h3 class="subcategoria-titulo">Vinil</h3>
-        <div class="produtos-grid">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Vinil</span>
-                <img src="img/graficarapida/vinil01.jpg" alt="Adesivo Vinil" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Adesivo Vinil 30x30cm</h3>
-                    <p class="produto-preco">R$ 29,90</p>
-                    <button class="add-to-cart" data-id="g301" data-name="Adesivo Vinil 30x30cm" data-price="29.90" data-img="img/graficarapida/vinil01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Vinil</span>
-                <img src="img/graficarapida/vinil02.jpg" alt="Adesivo Vinil Personalizado" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Adesivo Vinil Personalizado</h3>
-                    <p class="produto-preco">R$ 39,90</p>
-                    <button class="add-to-cart" data-id="g302" data-name="Adesivo Vinil Personalizado" data-price="39.90" data-img="img/graficarapida/vinil02.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Foto 10x15 -->
-    <div class="subcategoria-produtos" data-subcategoria="foto-10x15">
-        <h3 class="subcategoria-titulo">Foto 10x15</h3>
-        <div class="produtos-grid">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Foto</span>
-                <img src="img/graficarapida/foto01.jpg" alt="Foto 10x15" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Foto 10x15 Standard</h3>
-                    <p class="produto-preco">R$ 1,90 (un)</p>
-                    <button class="add-to-cart" data-id="g401" data-name="Foto 10x15 Standard" data-price="1.90" data-img="img/graficarapida/foto01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Foto</span>
-                <img src="img/graficarapida/foto02.jpg" alt="Foto 10x15 Premium" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Foto 10x15 Premium</h3>
-                    <p class="produto-preco">R$ 2,50 (un)</p>
-                    <button class="add-to-cart" data-id="g402" data-name="Foto 10x15 Premium" data-price="2.50" data-img="img/graficarapida/foto02.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Foto A4 -->
-    <div class="subcategoria-produtos" data-subcategoria="foto-a4">
-        <h3 class="subcategoria-titulo">Foto A4</h3>
-        <div class="produtos-grid">
-            <!-- Produto 1 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Foto</span>
-                <img src="img/graficarapida/foto03.jpg" alt="Foto A4" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Foto A4 Standard</h3>
-                    <p class="produto-preco">R$ 9,90</p>
-                    <button class="add-to-cart" data-id="g501" data-name="Foto A4 Standard" data-price="9.90" data-img="img/graficarapida/foto03.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Produto 2 -->
-            <div class="produto-card">
-                <span class="produto-categoria">Foto</span>
-                <img src="img/graficarapida/foto4.jpg" alt="Foto A4 Premium" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Foto A4 Premium</h3>
-                    <p class="produto-preco">R$ 12,90</p>
-                    <button class="add-to-cart" data-id="g502" data-name="Foto A4 Premium" data-price="12.90" data-img="img/graficarapida/foto4.jpg">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-        <!-- Seção Personalizados -->
-<section class="categoria-produtos" data-categoria="personalizados">
-    <h2 class="categoria-titulo">Personalizados</h2>
-    
-    <!-- Subseção Blusa e Body -->
-    <div class="subcategoria-produtos" data-subcategoria="blusa-body">
-        <h3 class="subcategoria-titulo">Blusa e Body Personalizado</h3>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <span class="produto-categoria">Blusa</span>
-                <img src="img/graficarapida/camisa01.jpg" alt="Blusa Personalizada" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Blusa Algodão Personalizada</h3>
-                    <p class="produto-preco">R$ 59,90</p>
-                    <button class="add-to-cart" data-id="p101" data-name="Blusa Algodão Personalizada" data-price="59.90" data-img="img/graficarapida/camisa01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        <!-- Seção Matrizes Africana -->
+        <section class="categoria-produtos" data-categoria="matrizes-africana">
+            <h2 class="categoria-titulo">Matrizes Africana</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Matrizes Africana</span>
+                    <img src="img/canecas/canecas 2.jpg" alt="Caneca Orixás" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Orixás</h3>
+                        <p class="produto-preco">R$ 44,90</p>
+                        <button class="add-to-cart" data-id="ma101" data-name="Caneca Orixás" data-price="44.90" data-img="img/canecas/canecas 2.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="produto-card">
+                    <span class="produto-categoria">Matrizes Africana</span>
+                    <img src="img/diadosnamorados/namorados 1.jpg" alt="Quadro Orixás" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Quadro Orixás</h3>
+                        <p class="produto-preco">R$ 89,90</p>
+                        <button class="add-to-cart" data-id="ma102" data-name="Quadro Orixás" data-price="89.90" data-img="img/diadosnamorados/namorados 1.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="produto-card">
-                <span class="produto-categoria">Body</span>
-                <img src="img/graficarapida/bady01.jpg" alt="Body Infantil" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Body Infantil Personalizado</h3>
-                    <p class="produto-preco">R$ 49,90</p>
-                    <button class="add-to-cart" data-id="p102" data-name="Body Infantil Personalizado" data-price="49.90" data-img="img/graficarapida/bady01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        </section>
+
+        <!-- Seção Gospel -->
+        <section class="categoria-produtos" data-categoria="gospel">
+            <h2 class="categoria-titulo">Gospel</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Gospel</span>
+                    <img src="img/canecas/canecas 4.jpg" alt="Caneca Gospel" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Gospel</h3>
+                        <p class="produto-preco">R$ 39,90</p>
+                        <button class="add-to-cart" data-id="g101" data-name="Caneca Gospel" data-price="39.90" data-img="img/canecas/canecas 4.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="produto-card">
+                    <span class="produto-categoria">Gospel</span>
+                    <img src="img/diadosnamorados/namorados 3.jpg" alt="Quadro Gospel" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Quadro Gospel</h3>
+                        <p class="produto-preco">R$ 79,90</p>
+                        <button class="add-to-cart" data-id="g102" data-name="Quadro Gospel" data-price="79.90" data-img="img/diadosnamorados/namorados 3.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Canecas -->
-    <div class="subcategoria-produtos" data-subcategoria="caneca">
-        <h3 class="subcategoria-titulo">Canecas Personalizadas</h3>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <span class="produto-categoria">Caneca</span>
-                <img src="img/canecas/canecas 1.jpg" alt="Caneca de Café" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Caneca de Café 300ml</h3>
-                    <p class="produto-preco">R$ 39,90</p>
-                    <button class="add-to-cart" data-id="p201" data-name="Caneca de Café 300ml" data-price="39.90" data-img="img/canecas/canecas 1.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        </section>
+
+        <!-- Seção Católica -->
+        <section class="categoria-produtos" data-categoria="catolica">
+            <h2 class="categoria-titulo">Católica</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Católica</span>
+                    <img src="img/canecas/canecas 6.jpg" alt="Caneca Católica" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Católica</h3>
+                        <p class="produto-preco">R$ 39,90</p>
+                        <button class="add-to-cart" data-id="ca101" data-name="Caneca Católica" data-price="39.90" data-img="img/canecas/canecas 6.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="produto-card">
-                <span class="produto-categoria">Caneca</span>
-                <img src="img/canecas/canecas  2.jpg" alt="Caneca Divertida" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Caneca Divertida 400ml</h3>
-                    <p class="produto-preco">R$ 44,90</p>
-                    <button class="add-to-cart" data-id="p202" data-name="Caneca Divertida 400ml" data-price="44.90" data-img="img/canecas/canecas 2.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        </section>
+
+        <!-- Seção Signos -->
+        <section class="categoria-produtos" data-categoria="signos">
+            <h2 class="categoria-titulo">Signos</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Signos</span>
+                    <img src="img/graficarapida/vinil01.jpg" alt="Adesivo Signos" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Adesivo Signos</h3>
+                        <p class="produto-preco">R$ 19,90</p>
+                        <button class="add-to-cart" data-id="s101" data-name="Adesivo Signos" data-price="19.90" data-img="img/graficarapida/vinil01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Copo Longdrink -->
-    <div class="subcategoria-produtos" data-subcategoria="copo-longdrink">
-        <h3 class="subcategoria-titulo">Copos Longdrink</h3>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <span class="produto-categoria">Copo</span>
-                <img src="img/graficarapida/copolong01.jpg" alt="Copo Longdrink" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Copo Longdrink 500ml</h3>
-                    <p class="produto-preco">R$ 34,90</p>
-                    <button class="add-to-cart" data-id="p301" data-name="Copo Longdrink 500ml" data-price="34.90" data-img="img/graficarapida/copolong01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        </section>
+
+        <!-- Seção Amigos(a) -->
+        <section class="categoria-produtos" data-categoria="amigos">
+            <h2 class="categoria-titulo">Amigos(a)</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Amigos</span>
+                    <img src="img/graficarapida/copolong01.jpg" alt="Copo Amigos" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Copo Amigos</h3>
+                        <p class="produto-preco">R$ 34,90</p>
+                        <button class="add-to-cart" data-id="a101" data-name="Copo Amigos" data-price="34.90" data-img="img/graficarapida/copolong01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Subseção Azulejo -->
-<div class="subcategoria-produtos" data-subcategoria="azulejo">
-    <h3 class="subcategoria-titulo">Azulejos Personalizados</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Azulejo</span>
-            <img src="img/diadosnamorados/namorados 1.jpg" alt="Azulejo 30x30" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Azulejo Personalizado 30x30cm</h3>
-                <p class="produto-preco">R$ 24,90/un</p>
-                <button class="add-to-cart" data-id="p401" data-name="Azulejo Personalizado 30x30cm" data-price="24.90" data-img="img/diadosnamorados/namorados 1.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Subseção Outros Personalizados -->
-<div class="subcategoria-produtos" data-subcategoria="outros-personalizados">
-    <h3 class="subcategoria-titulo">Outros Personalizados</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Personalizado</span>
-            <img src="https://via.placeholder.com/300x300?text=Chaveiro" alt="Chaveiro Personalizado" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Chaveiro Personalizado</h3>
-                <p class="produto-preco">R$ 14,90</p>
-                <button class="add-to-cart" data-id="p501" data-name="Chaveiro Personalizado" data-price="14.90" data-img="https://via.placeholder.com/300x300?text=Chaveiro">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- Seção Dia dos Namorados -->
-<section class="categoria-produtos" data-categoria="dia-namorados">
-    <h2 class="categoria-titulo">Dia dos Namorados</h2>
-    
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Presente</span>
-            <img src="img/canecas/canecas 4.jpg" alt="Caneca dia dos namorados" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Caneca dia dos namorados</h3>
-                <p class="produto-preco">R$ 89,90</p>
-                <button class="add-to-cart" data-id="d101" data-name="Caneca dia dos namorados" data-price="89.90" data-img="img/canecas/canecas 4.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <div class="produto-card">
-            <span class="produto-categoria">Caneca</span>
-            <img src="img/canecas/canecas 5.jpg" alt="Caneca Casal" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Caneca Casal</h3>
-                <p class="produto-preco">R$ 99,90 (par)</p>
-                <button class="add-to-cart" data-id="d102" data-name="Caneca Casal" data-price="99.90" data-img="img/canecas/canecas 5.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <div class="produto-card">
-            <span class="produto-categoria">Pelúcia</span>
-            <img src="img/diadosnamorados/namorados 2.jpg" alt="diadosnamorados" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">quadro dia dos namorados</h3>
-                <p class="produto-preco">R$ 79,90</p>
-                <button class="add-to-cart" data-id="d103" data-name="quadro dia dos namorados" data-price="79.90" data-img="img/diadosnamorados/namorados 2.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Subseção Presentes -->
-<div class="subcategoria-produtos" data-subcategoria="presentes">
-    <h3 class="subcategoria-titulo">presente dia dos namorados</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Presente</span>
-            <img src="img/diadosnamorados/namorados 3.jpg" alt="Kit Romântico" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">presente da dos namorados</h3>
-                <p class="produto-preco">R$ 129,90</p>
-                <button class="add-to-cart" data-id="d201" data-name="quadro dia dos namorados 02" data-price="129.90" data-img="img/diadosnamorados/namorados 3.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Subseção Acessórios -->
-<div class="subcategoria-produtos" data-subcategoria="acessorios">
-    <h3 class="subcategoria-titulo">Acessórios</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Acessório</span>
-            <img src="https://via.placeholder.com/300x300?text=Chaveiro+Casal" alt="Chaveiro Casal" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Chaveiro do Casal</h3>
-                <p class="produto-preco">R$ 29,90 (par)</p>
-                <button class="add-to-cart" data-id="d301" data-name="Chaveiro do Casal" data-price="29.90" data-img="https://via.placeholder.com/300x300?text=Chaveiro+Casal">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
-
-<!-- Seção Bazar -->
-<section class="categoria-produtos" data-categoria="bazar">
-    <h2 class="categoria-titulo">Bazar</h2>
-    
-    <!-- Subseção Decoração -->
-    <div class="subcategoria-produtos" data-subcategoria="decoracao">
-        <h3 class="subcategoria-titulo">Decoração</h3>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <span class="produto-categoria">Decoração</span>
-                <img src="img/graficarapida/pote01.jpg" alt="Quadro Decorativo" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Pote temperos</h3>
-                    <p class="produto-preco">R$ 129,90</p>
-                    <button class="add-to-cart" data-id="b101" data-name="Pote temperos" data-price="129.90" data-img="img/graficarapida/pote01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        <!-- Seção Anime -->
+        <section class="categoria-produtos" data-categoria="anime">
+            <h2 class="categoria-titulo">Anime</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Anime</span>
+                    <img src="img/graficarapida/vinil02.jpg" alt="Adesivo Anime" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Adesivo Anime</h3>
+                        <p class="produto-preco">R$ 14,90</p>
+                        <button class="add-to-cart" data-id="an101" data-name="Adesivo Anime" data-price="14.90" data-img="img/graficarapida/vinil02.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="produto-card">
-                <span class="produto-categoria">Decoração</span>
-                <img src="img/graficarapida/talheres01.jpg" alt="Porta Retrato" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Jogo de talheres</h3>
-                    <p class="produto-preco">R$ 199,90</p>
-                    <button class="add-to-cart" data-id="b102" data-name="Jogo de talheres" data-price="199.90" data-img="img/graficarapida/talheres01.jpg">
-                        Adicionar ao Carrinho
-                    </button>
+        </section>
+
+        <!-- Seção Professor -->
+        <section class="categoria-produtos" data-categoria="professor">
+            <h2 class="categoria-titulo">Professor</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Professor</span>
+                    <img src="img/graficarapida/pote01.jpg" alt="Caneca Professor" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Professor</h3>
+                        <p class="produto-preco">R$ 39,90</p>
+                        <button class="add-to-cart" data-id="pr101" data-name="Caneca Professor" data-price="39.90" data-img="img/graficarapida/pote01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Eletrônicos -->
-    <div class="subcategoria-produtos" data-subcategoria="eletronicos">
-        <h3 class="subcategoria-titulo">Eletrônicos</h3>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <span class="produto-categoria">Eletrônico</span>
-                <img src="https://via.placeholder.com/300x300?text=Fone+Bluetooth" alt="Fone Bluetooth" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Fone Bluetooth TWS</h3>
-                    <p class="produto-preco">R$ 159,90</p>
-                    <button class="add-to-cart" data-id="b201" data-name="Fone Bluetooth TWS" data-price="159.90" data-img="https://via.placeholder.com/300x300?text=Fone+Bluetooth">
-                        Adicionar ao Carrinho
-                    </button>
+        </section>
+
+        <!-- Seção Profissões -->
+        <section class="categoria-produtos" data-categoria="profissoes">
+            <h2 class="categoria-titulo">Profissões</h2>
+            <div class="produtos-grid">
+                <div class="produto-card">
+                    <span class="produto-categoria">Profissões</span>
+                    <img src="img/graficarapida/talheres01.jpg" alt="Caneca Profissões" class="produto-imagem">
+                    <div class="produto-info">
+                        <h3 class="produto-titulo">Caneca Profissões</h3>
+                        <p class="produto-preco">R$ 39,90</p>
+                        <button class="add-to-cart" data-id="pf101" data-name="Caneca Profissões" data-price="39.90" data-img="img/graficarapida/talheres01.jpg">
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="produto-card">
-                <span class="produto-categoria">Eletrônico</span>
-                <img src="https://via.placeholder.com/300x300?text=Carregador+Portátil" alt="Carregador Portátil" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Carregador Portátil 10000mAh</h3>
-                    <p class="produto-preco">R$ 129,90</p>
-                    <button class="add-to-cart" data-id="b202" data-name="Carregador Portátil 10000mAh" data-price="129.90" data-img="https://via.placeholder.com/300x300?text=Carregador+Portátil">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Subseção Papelaria -->
-    <div class="subcategoria-produtos" data-subcategoria="papelaria">
-        <h3 class="subcategoria-titulo">Papelaria</h3>
-        <div class="produtos-grid">
-            <div class="produto-card">
-                <span class="produto-categoria">Papelaria</span>
-                <img src="https://via.placeholder.com/300x300?text=Caderno+Personalizado" alt="Caderno Personalizado" class="produto-imagem">
-                <div class="produto-info">
-                    <h3 class="produto-titulo">Caderno Personalizado 200fl</h3>
-                    <p class="produto-preco">R$ 29,90</p>
-                    <button class="add-to-cart" data-id="b301" data-name="Caderno Personalizado 200fl" data-price="29.90" data-img="https://via.placeholder.com/300x300?text=Caderno+Personalizado">
-                        Adicionar ao Carrinho
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Subseção Utensílios Domésticos -->
-<div class="subcategoria-produtos" data-subcategoria="utensilios-domesticos">
-    <h3 class="subcategoria-titulo">Utensílios Domésticos</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Cozinha</span>
-            <img src="https://via.placeholder.com/300x300?text=Jogo+Panelas" alt="Jogo de Panelas" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Jogo de Panelas 5 peças</h3>
-                <p class="produto-preco">R$ 199,90</p>
-                <button class="add-to-cart" data-id="b401" data-name="Jogo de Panelas 5 peças" data-price="199.90" data-img="https://via.placeholder.com/300x300?text=Jogo+Panelas">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Subseção Beleza -->
-<div class="subcategoria-produtos" data-subcategoria="beleza">
-    <h3 class="subcategoria-titulo">Beleza</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Beleza</span>
-            <img src="img/graficarapida/beleza01.jpg" alt="Kit Maquiagem" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Kit Maquiagem Básico</h3>
-                <p class="produto-preco">R$ 89,90</p>
-                <button class="add-to-cart" data-id="b501" data-name="Kit Maquiagem Básico" data-price="89.90" data-img="img/graficarapida/beleza01.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Subseção Pet -->
-<div class="subcategoria-produtos" data-subcategoria="pet">
-    <h3 class="subcategoria-titulo">Pet</h3>
-    <div class="produtos-grid">
-        <div class="produto-card">
-            <span class="produto-categoria">Pet</span>
-            <img src="https://via.placeholder.com/300x300?text=Coleira+Pet" alt="Coleira Pet" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Coleira Personalizada para Pet</h3>
-                <p class="produto-preco">R$ 39,90</p>
-                <button class="add-to-cart" data-id="b601" data-name="Coleira Personalizada para Pet" data-price="39.90" data-img="https://via.placeholder.com/300x300?text=Coleira+Pet">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Seção Bazar - Subcategoria Lazer -->
-<div class="subcategoria-produtos" data-subcategoria="lazer">
-    <h3 class="subcategoria-titulo">Lazer</h3>
-    <div class="produtos-grid">
-        <!-- Produto 1 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Lazer</span>
-            <img src="img/graficarapida/piscina01.jpg" alt="Jogo de Tabuleiro" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Piscina 1000m</h3>
-                <p class="produto-preco">R$ 89,90</p>
-                <button class="add-to-cart" 
-                        data-id="b801" 
-                        data-name="Piscina" 
-                        data-price="89.90" 
-                        data-img="img/graficarapida/piscina01.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <!-- Produto 2 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Lazer</span>
-            <img src="img/graficarapida/cavalinho.jpg" alt="Kit Piquenique" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Cavalinho</h3>
-                <p class="produto-preco">R$ 129,90</p>
-                <button class="add-to-cart" 
-                        data-id="b802" 
-                        data-name="Kit Piquenique 4 Pessoas" 
-                        data-price="129.90" 
-                        data-img="img/graficarapida/cavalinho.jpg">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Subseção Natal -->
-<div class="subcategoria-produtos" data-subcategoria="natal">
-    <h3 class="subcategoria-titulo">Natal</h3>
-    <div class="produtos-grid">
-        <!-- Produto 1 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Natal</span>
-            <img src="https://via.placeholder.com/300x300?text=Enfeite+Natalino" alt="Enfeite Natalino" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Kit Enfeites Natalinos 12 peças</h3>
-                <p class="produto-preco">R$ 59,90</p>
-                <button class="add-to-cart" 
-                        data-id="b901" 
-                        data-name="Kit Enfeites Natalinos 12 peças" 
-                        data-price="59.90" 
-                        data-img="https://via.placeholder.com/300x300?text=Enfeite+Natalino">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <!-- Produto 2 -->
-        <div class="produto-card">
-            <span class="produto-categoria">Natal</span>
-            <img src="https://via.placeholder.com/300x300?text=Árvore+Natal" alt="Árvore de Natal" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Árvore de Natal 1,5m</h3>
-                <p class="produto-preco">R$ 149,90</p>
-                <button class="add-to-cart" 
-                        data-id="b902" 
-                        data-name="Árvore de Natal 1,5m" 
-                        data-price="149.90" 
-                        data-img="https://via.placeholder.com/300x300?text=Árvore+Natal">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Subseção Frete Grátis -->
-<div class="subcategoria-produtos" data-subcategoria="frete-gratis">
-    <h3 class="subcategoria-titulo">Frete Grátis</h3>
-    <div class="produtos-grid">
-        <!-- Produto 1 -->
-        <div class="produto-card frete-gratis">
-            <span class="produto-categoria">Frete Grátis</span>
-            <img src="https://via.placeholder.com/300x300?text=Smartwatch" alt="Smartwatch" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Smartwatch Inteligente</h3>
-                <p class="produto-preco">R$ 299,90 <span class="frete-badge">FRETE GRÁTIS</span></p>
-                <button class="add-to-cart" 
-                        data-id="b1001" 
-                        data-name="Smartwatch Inteligente" 
-                        data-price="299.90" 
-                        data-img="https://via.placeholder.com/300x300?text=Smartwatch">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-        
-        <!-- Produto 2 -->
-        <div class="produto-card frete-gratis">
-            <span class="produto-categoria">Frete Grátis</span>
-            <img src="https://via.placeholder.com/300x300?text=Jogo+Panelas" alt="Jogo de Panelas" class="produto-imagem">
-            <div class="produto-info">
-                <h3 class="produto-titulo">Jogo de Panelas Premium</h3>
-                <p class="produto-preco">R$ 399,90 <span class="frete-badge">FRETE GRÁTIS</span></p>
-                <button class="add-to-cart" 
-                        data-id="b1002" 
-                        data-name="Jogo de Panelas Premium" 
-                        data-price="399.90" 
-                        data-img="https://via.placeholder.com/300x300?text=Jogo+Panelas">
-                    Adicionar ao Carrinho
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-</section>
+        </section>
     </main>
     
     <!-- Carrinho de Compras -->
@@ -759,25 +341,25 @@
             Total: <span id="cart-total">R$ 0,00</span>
         </div>
         
-<div class="dados-cliente">
-    <h3>Seus Dados</h3>
-    <div class="form-group">
-        <label for="cliente-nome">Nome Completo:</label>
-        <input type="text" id="cliente-nome" placeholder="Digite seu nome" required>
-    </div>
-    <div class="form-group">
-        <label for="cliente-endereco">Endereço:</label>
-        <input type="text" id="cliente-endereco" placeholder="Rua, Nº, Bairro" required>
-    </div>
-    <div class="form-group">
-        <label for="cliente-telefone">WhatsApp:</label>
-        <input type="tel" id="cliente-telefone" placeholder="(21) 98765-4321" required>
-    </div>
-    <div class="form-group">
-        <label for="cliente-observacoes">Observações:</label>
-        <textarea id="cliente-observacoes" placeholder="Ponto de referência, etc."></textarea>
-    </div>
-</div>
+        <div class="dados-cliente">
+            <h3>Seus Dados</h3>
+            <div class="form-group">
+                <label for="cliente-nome">Nome Completo:</label>
+                <input type="text" id="cliente-nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="cliente-endereco">Endereço:</label>
+                <input type="text" id="cliente-endereco" placeholder="Rua, Nº, Bairro" required>
+            </div>
+            <div class="form-group">
+                <label for="cliente-telefone">WhatsApp:</label>
+                <input type="tel" id="cliente-telefone" placeholder="(21) 98765-4321" required>
+            </div>
+            <div class="form-group">
+                <label for="cliente-observacoes">Observações:</label>
+                <textarea id="cliente-observacoes" placeholder="Ponto de referência, etc."></textarea>
+            </div>
+        </div>
 
         <button class="checkout-btn" id="checkout-btn">
             <i class="fab fa-whatsapp"></i> Finalizar via WhatsApp
